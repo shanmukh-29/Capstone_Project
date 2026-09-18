@@ -1,0 +1,13 @@
+beautifulsoup4>=4.12
+fastapi>=0.110
+imbalanced-learn>=0.12
+joblib>=1.3
+langgraph>=0.2
+matplotlib>=3.8
+pandas>=2.0
+requests>=2.31
+scikit-learn>=1.4
+seaborn>=0.13
+sentence-transformers>=3.0
+chromadb>=0.5
+uvicorn>=0.30
