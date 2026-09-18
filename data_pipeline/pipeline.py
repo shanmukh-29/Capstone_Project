@@ -12,7 +12,7 @@ RATE_GBP_TO_INR = 105.50
 RATING_MAP = {"One": 1, "Two": 2, "Three": 3, "Four": 4, "Five": 5}
 
 
-def scrape_books(pages=5):
+def scrape_books(pages=20): # Increased default pages to 20
     rows = []
     session = requests.Session()
     for page in range(1, pages + 1):
@@ -39,34 +39,24 @@ def scrape_books(pages=5):
 def clean_books(raw):
     data = raw.copy()
     data["price_gbp"] = pd.to_numeric(data["price_raw"].str.replace("£", "", regex=False), errors="coerce")
+    data["price_inr"] = data["price_gbp"] * RATE_GBP_TO_INR
     data["rating"] = data["rating_raw"].map(RATING_MAP)
-    data["in_stock"] = data["availability_raw"].str.contains("In stock", case=False, na=False)
-    for column in ("price_gbp", "rating"):
-        data[column] = data[column].fillna(data[column].median())
-    data["rating"] = data["rating"].round().astype(int).clip(1, 5)
-    data["price_inr"] = (data["price_gbp"] * RATE_GBP_TO_INR).round(2)
-    return data.dropna(subset=["title", "category", "price_gbp"])[
-        ["title", "price_gbp", "price_inr", "rating", "in_stock", "category"]
-    ]
+    data["in_stock"] = data["availability_raw"].apply(lambda x: 1 if "In stock" in x else 0)
+    return data.drop(columns=["price_raw", "rating_raw", "availability_raw"])
 
 
 def load_database(data):
-    if DB_PATH.exists():
-        DB_PATH.unlink()
     with sqlite3.connect(DB_PATH) as connection:
-        connection.execute("PRAGMA foreign_keys = ON")
-        connection.executescript("""
-            CREATE TABLE categories (category_id INTEGER PRIMARY KEY, category_name TEXT UNIQUE NOT NULL);
-            CREATE TABLE books (
-                book_id INTEGER PRIMARY KEY, title TEXT NOT NULL, price_gbp REAL NOT NULL,
-                price_inr REAL NOT NULL, rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
-                in_stock INTEGER NOT NULL CHECK (in_stock IN (0, 1)),
-                category_id INTEGER NOT NULL REFERENCES categories(category_id)
-            );
-        """)
-        for category in sorted(data["category"].unique()):
-            connection.execute("INSERT INTO categories(category_name) VALUES (?)", (category,))
-        category_ids = dict(connection.execute("SELECT category_name, category_id FROM categories"))
+        # Categories
+        connection.execute("DROP TABLE IF EXISTS categories;")
+        connection.execute("CREATE TABLE categories(category_id INTEGER PRIMARY KEY, category_name TEXT);")
+        category_names = data["category"].unique()
+        category_ids = {name: i + 1 for i, name in enumerate(category_names)}
+        connection.executemany("INSERT INTO categories(category_id, category_name) VALUES (?, ?)", [(v, k) for k, v in category_ids.items()])
+
+        # Books
+        connection.execute("DROP TABLE IF EXISTS books;")
+        connection.execute("CREATE TABLE books(book_id INTEGER PRIMARY KEY, title TEXT, price_gbp REAL, price_inr REAL, rating INTEGER, in_stock INTEGER, category_id INTEGER, FOREIGN KEY(category_id) REFERENCES categories(category_id));")
         records = [(r.title, r.price_gbp, r.price_inr, int(r.rating), int(r.in_stock), category_ids[r.category]) for r in data.itertuples()]
         connection.executemany("INSERT INTO books(title, price_gbp, price_inr, rating, in_stock, category_id) VALUES (?, ?, ?, ?, ?, ?)", records)
 

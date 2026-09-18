@@ -1,0 +1,496 @@
+
+SELECT_WHERE:
+SELECT title, price_gbp FROM books WHERE in_stock = 1;
+                                                                                                                                                                          title price_gbp
+                                                                                                                                                           A Light in the Attic      None
+                                                                                                                                                             Tipping the Velvet      None
+                                                                                                                                                                     Soumission      None
+                                                                                                                                                                  Sharp Objects      None
+                                                                                                                                          Sapiens: A Brief History of Humankind      None
+                                                                                                                                                                The Requiem Red      None
+                                                                                                                             The Dirty Little Secrets of Getting Your Dream Job      None
+                                                                                        The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull      None
+                                                                                 The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics      None
+                                                                                                                                                                The Black Maria      None
+                                                                                                                                 Starving Hearts (Triangular Trade Trilogy, #1)      None
+                                                                                                                                                          Shakespeare's Sonnets      None
+                                                                                                                                                                    Set Me Free      None
+                                                                                                                        Scott Pilgrim's Precious Little Life (Scott Pilgrim #1)      None
+                                                                                                                                                      Rip it Up and Start Again      None
+                                                                                             Our Band Could Be Your Life: Scenes from the American Indie Underground, 1981-1991      None
+                                                                                                                                                                           Olio      None
+                                                                                                                          Mesaerion: The Best Science Fiction Stories 1800-1849      None
+                                                                                                                                                   Libertarianism for Beginners      None
+                                                                                                                                                        It's Only the Himalayas      None
+                                                                                                                                                                    In Her Wake      None
+                                                                                                                                                                How Music Works      None
+Foolproof Preserving: A Guide to Small Batch Jams, Jellies, Pickles, Condiments, and More: A Foolproof Guide to Making Small Batch Jams, Jellies, Pickles, Condiments, and More      None
+                                                                                                                                                     Chase Me (Paris Nights #2)      None
+                                                                                                                                                                     Black Dust      None
+                                                                                                                                                  Birdsong: A Story in Pictures      None
+                                                                    America's Cradle of Quarterbacks: Western Pennsylvania's Football Factory from Johnny Unitas to Joe Montana      None
+                                                                                                                                                 Aladdin and His Wonderful Lamp      None
+                                                                                                                        Worlds Elsewhere: Journeys Around Shakespeareâs Globe      None
+                                                                                                                                                                 Wall and Piece      None
+                                                                                                                     The Four Agreements: A Practical Guide to Personal Freedom      None
+                                                                                                      The Five Love Languages: How to Express Heartfelt Commitment to Your Mate      None
+                                                                                                                                                              The Elephant Tree      None
+                                                                                                                                                         The Bear and the Piano      None
+                                                                                                                                                                 Sophie's World      None
+                                                                                                                                                                    Penny Maybe      None
+                                                                                                                                 Maude (1883-1993):She Grew Up with the country      None
+                                                                                                                                                           In a Dark, Dark Wood      None
+                                                                                                                                                            Behind Closed Doors      None
+                                                                                                                                                 You can't bury them all: Poems      None
+                                                                                                                                                 Slow States of Collapse: Poems      None
+                                                                                                                                                          Reasons to Stay Alive      None
+                                                                                                                                                    Private Paris (Private #10)      None
+                                                                                                             #HigherSelfie: Wake Up Your Life. Free Your Soul. Find Your Tribe.      None
+                                                                                                                                                Without Borders (Wanderlove #1)      None
+                                                                                                                                                               When We Collided      None
+                                                                                                                                                   We Love You, Charlie Freeman      None
+                                                                                                                                        Untitled Collection: Sabbath Poems 2014      None
+                                                                      Unseen City: The Majesty of Pigeons, the Discreet Charm of Snails & Other Wonders of the Urban Wilderness      None
+                                                                                                                                                                 Unicorn Tracks      None
+                                                                         Unbound: How Eight Technologies Made Us Human, Transformed Society, and Brought Our World to the Brink      None
+                                                                                                                        Tsubasa: WoRLD CHRoNiCLE 2 (Tsubasa WoRLD CHRoNiCLE #2)      None
+                                                                                                    Throwing Rocks at the Google Bus: How Growth Became the Enemy of Prosperity      None
+                                                                                                                                                                This One Summer      None
+                                                                                                                                                                         Thirst      None
+                                                                                                                                    The Torch Is Passed: A Harding Family Story      None
+                                                                                                                                                The Secret of Dreadwillow Carse      None
+                                                The Pioneer Woman Cooks: Dinnertime: Comfort Classics, Freezer Food, 16-Minute Meals, and Other Delicious Ways to Solve Supper!      None
+                                                                                                                                                            The Past Never Ends      None
+                                                                                                                      The Natural History of Us (The Fine Art of Pretending #2)      None
+                                                                                                                                       The Nameless City (The Nameless City #1)      None
+                                                                                                                              The Murder That Never Was (Forensic Instincts #5)      None
+                                                                                                                      The Most Perfect Thing: Inside (and Outside) a Bird's Egg      None
+                         The Mindfulness and Acceptance Workbook for Anxiety: A Guide to Breaking Free from Anxiety, Phobias, and Worry Using Acceptance and Commitment Therapy      None
+                                                                                         The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing      None
+                                                                                             The Inefficiency Assassin: Time Management Tactics for Working Smarter, Not Longer      None
+                                                                                                                      The Gutsy Girl: Escapades for Your Life of Epic Adventure      None
+                                                                                                                 The Electric Pencil: Drawings from Inside State Hospital No. 3      None
+                                                                                                                                   The Death of Humanity: and the Case for Life      None
+                                                                                    The Bulletproof Diet: Lose up to a Pound a Day, Reclaim Energy and Focus, Upgrade Your Life      None
+                                                                                                                                                                 The Art Forger      None
+                                                                                                    The Age of Genius: The Seventeenth Century and the Birth of the Modern Mind      None
+                                                                                                            The Activist's Tao Te Ching: Ancient Advice for a Modern Revolution      None
+                                                                                                 Spark Joy: An Illustrated Master Class on the Art of Organizing and Tidying Up      None
+                                                                                                                                                                    Soul Reader      None
+                                                                                                                                                                       Security      None
+                                                                                                                                  Saga, Volume 6 (Saga (Collected Editions) #6)      None
+                                                                                                                                  Saga, Volume 5 (Saga (Collected Editions) #5)      None
+                                                                                                              Reskilling America: Learning to Labor in the Twenty-First Century      None
+                                                                                                            Rat Queens, Vol. 3: Demons (Rat Queens (Collected Editions) #11-15)      None
+                                                                                              Princess Jellyfish 2-in-1 Omnibus, Vol. 01 (Princess Jellyfish 2-in-1 Omnibus #1)      None
+                                                                                                                               Princess Between Worlds (Wide-Awake Princess #5)      None
+                                                                                                                                                    Pop Gun War, Volume 1: Gift      None
+            Political Suicide: Missteps, Peccadilloes, Bad Calls, Backroom Hijinx, Sordid Pasts, Rotten Breaks, and Just Plain Dumb Mistakes in the Annals of American Politics      None
+                                                                                                                                                                       Patience      None
+                                                                                                                         Outcast, Vol. 1: A Darkness Surrounds Him (Outcast #1)      None
+                                                                                                         orange: The Complete Collection 1 (orange: The Complete Collection #1)      None
+                                                                                                                        Online Marketing for Busy Authors: A Step-By-Step Guide      None
+                                                                                                                                                            On a Midnight Clear      None
+                                                                                                                                                              Obsidian (Lux #1)      None
+                                                                                                                                          My Paris Kitchen: Recipes and Stories      None
+                                                                                                                                                              Masks and Shadows      None
+                                                                                            Mama Tried: Traditional Italian Cooking for the Screwed, Crude, Vegan, and Tattooed      None
+                                                                                                                  Lumberjanes, Vol. 2: Friendship to the Max (Lumberjanes #5-8)      None
+                                                                                                                 Lumberjanes, Vol. 1: Beware the Kitten Holy (Lumberjanes #1-4)      None
+                                                                                                                        Lumberjanes Vol. 3: A Terrible Plan (Lumberjanes #9-12)      None
+                                                                                                                       Layered: Baking, Building, and Styling Spectacular Cakes      None
+                                                                                                          Judo: Seven Steps to Black Belt (an Introductory Guide for Beginners)      None
+                                                                                                                                                                           Join      None
+                                                                                                                                      In the Country We Love: My Family Divided      None
+                                                                                                           Immunity: How Elie Metchnikoff Changed the Course of Modern Medicine      None
+                                                                                              I Hate Fairyland, Vol. 1: Madly Ever After (I Hate Fairyland (Compilations) #1-5)      None
+                                                                                                                                                   I am a Hero Omnibus Volume 1      None
+                                                                                                                             How to Be Miserable: 40 Strategies You Already Use      None
+                                                                                                                                  Her Backup Boyfriend (The Sorensen Family #1)      None
+                                                                                                                                           Giant Days, Vol. 2 (Giant Days #5-8)      None
+                                                                                                      Forever and Forever: The Courtship of Henry Longfellow and Fanny Appleton      None
+                                                                                                                                             First and First (Five Boroughs #3)      None
+                                                                                                                                          Fifty Shades Darker (Fifty Shades #2)      None
+                                                                                                  Everydata: The Misinformation Hidden in the Little Data You Consume Every Day      None
+                                                                                            Don't Be a Jerk: And Other Practical Advice from Dogen, Japan's Greatest Zen Master      None
+                                                                                                                                                           Danganronpa Volume 1      None
+                                                                                                                                         Crown of Midnight (Throne of Glass #2)      None
+                                                                                                                            Codename Baboushka, Volume 1: The Conclave of Death      None
+                                                                                                                                                                  Camp Midnight      None
+                                                                                                             Call the Nurse: True Stories of a Country Nurse on a Scottish Isle      None
+                                                                                                                                                                        Burning      None
+                                                                                                                                                                     Bossypants      None
+                                                                                                Bitch Planet, Vol. 1: Extraordinary Machine (Bitch Planet (Collected Editions))      None
+                                                                                                     Avatar: The Last Airbender: Smoke and Shadow, Part 3 (Smoke and Shadow #3)      None
+                                                                                                                 Algorithms to Live By: The Computer Science of Human Decisions      None
+                                                                                                                                   A World of Flavor: Your Gluten Free Passport      None
+                                                                                                                  A Piece of Sky, a Grain of Rice: A Memoir in Four Meditations      None
+                                                                                                                                                               A Murder in Time      None
+                                                                                                                                        A Flight of Arrows (The Pathfinders #2)      None
+                                                                                                                                                     A Fierce and Subtle Poison      None
+                                                                                                                   A Court of Thorns and Roses (A Court of Thorns and Roses #1)      None
+                                                                                                                     (Un)Qualified: How God Uses Broken People to Do Big Things      None
+                                                                                                                            You Are What You Love: The Spiritual Power of Habit      None
+                                                                                       William Shakespeare's Star Wars: Verily, A New Hope (William Shakespeare's Star Wars #4)      None
+                                                                                                                                                         Tuesday Nights in 1980      None
+                                                                                                                                                     Tracing Numbers on a Train      None
+                                                                                                                                           Throne of Glass (Throne of Glass #1)      None
+                                                                                      Thomas Jefferson and the Tripoli Pirates: The Forgotten War That Changed American History      None
+                                                                                                                                                           Thirteen Reasons Why      None
+                                                                                                          The White Cat and the Monk: A Retelling of the Poem âPangur BÃ¡nâ      None
+                                                                                                                                                              The Wedding Dress      None
+                                                                                                                                                                The Vacationers      None
+                                                                                                                       The Third Wave: An Entrepreneurâs Vision of the Future      None
+                                                                                                                                                                   The Stranger      None
+                                                                                                                                              The Shadow Hero (The Shadow Hero)      None
+                                                                                                                                                     The Secret (The Secret #1)      None
+                                                                                                                                           The Regional Office Is Under Attack!      None
+                                                                                                                    The Psychopath Test: A Journey Through the Madness Industry      None
+                                                                                                                                                                    The Project      None
+                                                                                                                           The Power of Now: A Guide to Spiritual Enlightenment      None
+                                                                                                                        The Omnivore's Dilemma: A Natural History of Four Meals      None
+                                                                                                             The Nerdy Nummies Cookbook: Sweet Treats for the Geek in All of Us      None
+                                                                                                                                The Murder of Roger Ackroyd (Hercule Poirot #4)      None
+                                                                                                                                                    The Mistake (Off-Campus #2)      None
+                                                                                                                                    The Matchmaker's Playbook (Wingmen Inc. #1)      None
+                                                                                            The Love and Lemons Cookbook: An Apple-to-Zucchini Celebration of Impromptu Cooking      None
+                                                                                                         The Long Shadow of Small Ghosts: Murder and Memory in an American City      None
+                                                                                                                                                                The Kite Runner      None
+                                                                                                                                                          The House by the Lake      None
+                                                                                                                                 The Glittering Court (The Glittering Court #1)      None
+                                                                                                                                                          The Girl on the Train      None
+                                                                                                                                                            The Genius of Birds      None
+                                                                                                                                                            The Emerald Mystery      None
+                                                                             The Cookies & Cups Cookbook: 125+ sweet & savory recipes reminding you to Always Eat Dessert First      None
+                                                                               The Bridge to Consciousness: I'm Writing the Bridge Between Science and Our Old and New Beliefs.      None
+                                                                                                                        The Artist's Way: A Spiritual Path to Higher Creativity      None
+                                                                                                                                                                 The Art of War      None
+                                                                                                                                                                  The Argonauts      None
+                                                                                                    The 10% Entrepreneur: Live Your Startup Dream Without Quitting Your Day Job      None
+                                                                                                                                               Suddenly in Love (Lake Haven #1)      None
+                                                                                                                                                       Something More Than This      None
+                                                                                                                                                                Soft Apocalypse      None
+                                                                                                                                                 So You've Been Publicly Shamed      None
+                                                                                                                                      Shoe Dog: A Memoir by the Creator of NIKE      None
+                                                                                                                                             Shobu Samurai, Project Aryoku (#3)      None
+                                                                                                                                             Secrets and Lace (Fatal Hearts #1)      None
+                                                                                                                                                 Scarlett Epstein Hates It Here      None
+                                                                                                                           Romero and Juliet: A Tragic Tale of Love and Zombies      None
+                                                                                                                                                                 Redeeming Love      None
+                                                           Poses for Artists Volume 1 - Dynamic and Sitting Poses: An Essential Reference for Figure Drawing and the Human Form      None
+                                                                                                                                                Poems That Make Grown Women Cry      None
+                                                                                                                                                              Nightingale, Sing      None
+                                                                                                                                                     Night Sky with Exit Wounds      None
+                                                                                                                                                                   Mrs. Houdini      None
+                                                                                                                                                                 Modern Romance      None
+                                                                                        Miss Peregrineâs Home for Peculiar Children (Miss Peregrineâs Peculiar Children #1)      None
+                                                                                                                                   Louisa: The Extraordinary Life of Mrs. Adams      None
+                                                                                                                                                                     Little Red      None
+                                                                                                                     Library of Souls (Miss Peregrineâs Peculiar Children #3)      None
+                                                                                                                                                 Large Print Heart of the Pride      None
+                                                                                                         I Had a Nice Time And Other Lies...: How to find love & sh*t like that      None
+                                                                                                                          Hollow City (Miss Peregrineâs Peculiar Children #2)      None
+                                                                                                                                                                       Grumbles      None
+                                                                                                             Full Moon over Noahâs Ark: An Odyssey to Mount Ararat and Beyond      None
+                                                                                                                                                 Frostbite (Vampire Academy #2)      None
+                                                                                                                                                                Follow You Home      None
+                                                                                                                                 First Steps for New Christians (Print Edition)      None
+                                                                                                                                       Finders Keepers (Bill Hodges Trilogy #2)      None
+                                                                                                                                   Fables, Vol. 1: Legends in Exile (Fables #1)      None
+                                                                                                                                                              Eureka Trivia 6.0      None
+                                                                                                                            Drive: The Surprising Truth About What Motivates Us      None
+                                                                                                                                        Done Rubbed Out (Reightman & Bailey #1)      None
+                                                                                                                                              Doing It Over (Most Likely To #1)      None
+                                                                    Deliciously Ella Every Day: Quick and Easy Recipes for Gluten-Free Snacks, Packed Lunches, and Simple Meals      None
+                                                                                                                                                                     Dark Notes      None
+                                                                            Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead      None
+                                                                                                                                                                   Close to You      None
+                                                                                                                              Chasing Heaven: What Dying Taught Me About Living      None
+                                                                                                                                         Big Magic: Creative Living Beyond Fear      None
+                                                                                                                   Becoming Wise: An Inquiry into the Mystery and Art of Living      None
+                                                                                                                              Beauty Restored (Riley Family Legacy Novellas #3)      None
+                                                                                                                                            Batman: The Long Halloween (Batman)      None
+                                                                                                                                       Batman: The Dark Knight Returns (Batman)      None
+                                                                                                                                                                 Ayumi's Violin      None
+                                                                                                                                                                      Anonymous      None
+                                                                                                                                                 Amy Meets the Saints and Sages      None
+                                                                                                                                                                 Amid the Chaos      None
+                                                                                                                                                                         Amatus      None
+                                                                                                                                                 Agnostic: A Spirited Manifesto      None
+                                                                                                                                Zealot: The Life and Times of Jesus of Nazareth      None
+                                                                                                                                                                   You (You #1)      None
+                                                                                                               Wonder Woman: Earth One, Volume One (Wonder Woman: Earth One #1)      None
+                                                                                                                                                                     Wild Swans      None
+                                                                                             Why the Right Went Wrong: Conservatism--From Goldwater to the Tea Party and Beyond      None
+                                                                         Whole Lotta Creativity Going On: 60 Fun and Unusual Exercises to Awaken and Strengthen Your Creativity      None
+                                                                                                            What's It Like in Space?: Stories from Astronauts Who've Been There      None
+                                                                                                                 We Are Robin, Vol. 1: The Vigilante Business (We Are Robin #1)      None
+                                                                                                                                              Walt Disney's Alice in Wonderland      None
+                                                                                                                                       V for Vendetta (V for Vendetta Complete)      None
+                                                                                                                                        Until Friday Night (The Field Party #1)      None
+                                                                                                         Unbroken: A World War II Story of Survival, Resilience, and Redemption      None
+                                                                                                                                                                   Twenty Yawns      None
+                                                                                                                                                              Through the Woods      None
+                                                                                                                                                          This Is Where It Ends      None
+                                                                                                                                                   The Year of Magical Thinking      None
+                                                                                                                                                            The Wright Brothers      None
+                                                                                                                                          The White Queen (The Cousins' War #1)      None
+                                                                                                                                            The Wedding Pact (The O'Malleys #2)      None
+                                                                                                                                                                The Time Keeper      None
+                                                                                                                                                          The Testament of Mary      None
+                                                                                                                                                         The Star-Touched Queen      None
+                                                                                                                                                          The Songs of the Gods      None
+                                                                                                                                                           The Song of Achilles      None
+                                                                                                                                             The Rosie Project (Don Tillman #1)      None
+                                                                                                                  The Power of Habit: Why We Do What We Do in Life and Business      None
+                                                                                                                                                      The Marriage of Opposites      None
+                                                                                                                    The Lucifer Effect: Understanding How Good People Turn Evil      None
+                                                                                                                                        The Long Haul (Diary of a Wimpy Kid #9)      None
+                                                                                                                                                                      The Loney      None
+                                                                                                                               The Literature Book (Big Ideas Simply Explained)      None
+                                                                                                                                                 The Last Mile (Amos Decker #2)      None
+                                                                                                                                           The Immortal Life of Henrietta Lacks      None
+                                                                                                                                    The Hidden Oracle (The Trials of Apollo #1)      None
+                                                              The Help Yourself Cookbook for Kids: 60 Easy Plant-Based Recipes Kids Can Make to Stay Healthy and Save the Earth      None
+                                                                                                                                                     The Guilty (Will Robie #4)      None
+                                                                                                                                            The First Hostage (J.B. Collins #2)      None
+                                                                                                                                                                The Dovekeepers      None
+                                                                                                                                                                The Darkest Lie      None
+                                                                                                                                The Bane Chronicles (The Bane Chronicles #1-11)      None
+                                                                             The Bad-Ass Librarians of Timbuktu: And Their Race to Save the Worldâs Most Precious Manuscripts      None
+                                                                                                                                            The 14th Colony (Cotton Malone #11)      None
+                                                                                                                                         That Darkness (Gardiner and Renner #1)      None
+                                                                                                                                           Tastes Like Fear (DI Marnie Rome #3)      None
+                                                                                                                                                               Take Me with You      None
+                                                                                                                                                         Swell: A Year of Waves      None
+                                                                                                                  Superman Vol. 1: Before Truth (Superman by Gene Luen Yang #1)      None
+                                                                                                                                                   Still Life with Bread Crumbs      None
+                                                                                                                                                                     Steve Jobs      None
+                                                                                                            Sorting the Beef from the Bull: The Science of Food Fraud Forensics      None
+                                                                                                                                            Someone Like You (The Harrisons #2)      None
+                                                                                                                             So Cute It Hurts!!, Vol. 6 (So Cute It Hurts!! #6)      None
+                                                                                                                                                                          Shtum      None
+                                                                                                             See America: A Celebration of Our National Parks & Treasured Sites      None
+                                                                                                                                                                          salt.      None
+                                                                                                                                                                      Robin War      None
+                                                                                                              Red Hood/Arsenal, Vol. 1: Open for Business (Red Hood/Arsenal #1)      None
+                                                                                                                                                                      Rain Fish      None
+                                                                                                                     Quarter Life Poetry: Poems for the Young, Broke and Hangry      None
+                                                                                                                                                                   Pet Sematary      None
+                                                                                              Overload: How to Unplug, Unwind, and Unleash Yourself from the Pressure of Stress      None
+                                                                                                                                                                Once Was a Time      None
+                                                                                                                                          Old School (Diary of a Wimpy Kid #10)      None
+                                                                                                           No Dream Is Too High: Life Lessons From a Man Who Walked on the Moon      None
+                                                                                             Naruto (3-in-1 Edition), Vol. 14: Includes Vols. 40, 41 & 42 (Naruto: Omnibus #14)      None
+                                                                                                                                                         My Name Is Lucy Barton      None
+                                                                                                                                                                  My Mrs. Brown      None
+                                                                                                                                                               My Kind of Crazy      None
+                                                                                                                                          Mr. Mercedes (Bill Hodges Trilogy #1)      None
+                                                                                                                                         More Than Music (Chasing the Dream #1)      None
+                                                                                                                           Made to Stick: Why Some Ideas Survive and Others Die      None
+                                                                                                                                                          Luis Paints the World      None
+                                                                                                                                                            Luckiest Girl Alive      None
+                                                                                                                   Lowriders to the Center of the Earth (Lowriders in Space #2)      None
+                                                                                                                                                  Love Is a Mix Tape (Music #1)      None
+                                                                                                                         Looking for Lovely: Collecting the Moments that Matter      None
+                                                                                          Living Leadership by Insight: A Good Leader Achieves, a Great Leader Builds Monuments      None
+                                                                                                                                       Let It Out: A Journey Through Journaling      None
+                                                                                                                                          Lady Midnight (The Dark Artifices #1)      None
+                                                                                                          It's All Easy: Healthy, Delicious Weeknight Meals in under 30 Minutes      None
+                                                                                                                                               Island of Dragons (Unwanteds #7)      None
+                                                                               I Know What I'm Doing -- and Other Lies I Tell Myself: Dispatches from a Life Under Construction      None
+                                                                                                                                                      I Am Pilgrim (Pilgrim #1)      None
+                                                                 Hyperbole and a Half: Unfortunate Situations, Flawed Coping Mechanisms, Mayhem, and Other Things That Happened      None
+                                                                                                                                                     Hush, Hush (Hush, Hush #1)      None
+                                                                                                                                        Hold Your Breath (Search and Rescue #1)      None
+                                                                                                                                                       Hamilton: The Revolution      None
+                                                                                                                                                           Greek Mythic History      None
+                                                                                                                              God: The Most Unpleasant Character in All Fiction      None
+                                                                                                                                Glory over Everything: Beyond The Kitchen House      None
+                                                                                                                                        Feathers: Displays of Brilliant Plumage      None
+                                                                                                 Far & Away: Places on the Brink of Change: Seven Continents, Twenty-Five Years      None
+                                                                                                                                                                Every Last Word      None
+                                                                                                                                               Eligible (The Austen Project #4)      None
+                                                                                                                                                                       El Deafo      None
+                                                                                                                                                           Eight Hundred Grapes      None
+                                                                            Eaternity: More than 150 Deliciously Easy Vegan Recipes for a Long, Healthy, Satisfied, Joyful Life      None
+                                                                                                                                                              Eat Fat, Get Thin      None
+                                                                                                                                                               Don't Get Caught      None
+                                                                                                                                                  Doctor Sleep (The Shining #2)      None
+                                                                       Demigods & Magicians: Percy and Annabeth Meet the Kanes (Percy Jackson & Kane Chronicles Crossover #1-3)      None
+                                                                                                                                                             Dear Mr. Knightley      None
+                                                                                                                                                           Daily Fantasy Sports      None
+                                                                                                                                    Crazy Love: Overwhelmed by a Relentless God      None
+                                                                                                                                    Cometh the Hour (The Clifton Chronicles #6)      None
+                                                                                                                                         Code Name Verity (Code Name Verity #1)      None
+                                                                                                                                      Clockwork Angel (The Infernal Devices #1)      None
+                                                                                                                                      City of Glass (The Mortal Instruments #3)      None
+                                                                                                                              City of Fallen Angels (The Mortal Instruments #4)      None
+                                                                                                                                      City of Bones (The Mortal Instruments #1)      None
+                                                                                                                                      City of Ashes (The Mortal Instruments #2)      None
+                                                                                                                                                                           Cell      None
+                                                                                                                                                 Catching Jordan (Hundred Oaks)      None
+                                                                                                                                    Carry On, Warrior: Thoughts on Life Unarmed      None
+                                                                                                                                                                         Carrie      None
+                                                                                                              Buying In: The Secret Dialogue Between What We Buy and Who We Are      None
+                                                                                                                                             Brain on Fire: My Month of Madness      None
+                                                                                                                                                                 Batman: Europa      None
+                                                                                                                                               Barefoot Contessa Back to Basics      None
+                                                                                                    Barefoot Contessa at Home: Everyday Recipes You'll Make Over and Over Again      None
+                                                                                                                                                                Balloon Animals      None
+                                                                                                                                                                 Art Ops Vol. 1      None
+                                                         Aristotle and Dante Discover the Secrets of the Universe (Aristotle and Dante Discover the Secrets of the Universe #1)      None
+                                                                                                                                             Angels Walking (Angels Walking #1)      None
+                                                                                                                                            Angels & Demons (Robert Langdon #1)      None
+                                                                                                                                                    All the Light We Cannot See      None
+                                                                                                                          Adulthood Is a Myth: A "Sarah's Scribbles" Collection      None
+                                                                                                                                                                  Abstract City      None
+                                                                                                                                         A Time of Torment (Charlie Parker #14)      None
+                                                                                                                                        A Study in Scarlet (Sherlock Holmes #1)      None
+                                                                                               A Series of Catastrophes and Miracles: A True Story of Love, Science, and Cancer      None
+                                                                                                                                        A People's History of the United States      None
+                                                                                                                                                               A Man Called Ove      None
+                                                                                                                                  A Distant Mirror: The Calamitous 14th Century      None
+                                                                                                                                           A Brush of Wings (Angels Walking #3)      None
+                                                                                                                          1491: New Revelations of the Americas Before Columbus      None
+                                                                                                                                     The Three Searches, Meaning, and the Story      None
+                                                                                                                                               Searching for Meaning in Gailana      None
+                                                                                                                                                                           Rook      None
+                                                                                                                                My Kitchen Year: 136 Recipes That Saved My Life      None
+                                                                                                               13 Hours: The Inside Account of What Really Happened In Benghazi      None
+                                                                                                                                                    Will You Won't You Want Me?      None
+                                                                                                                  Tipping Point for Planet Earth: How Close Are We to the Edge?      None
+                                                                                                                                                         The Star-Touched Queen      None
+                                                                                                                                        The Silent Sister (Riley MacPherson #1)      None
+                                                                                                                 The Midnight Watch: A Novel of the Titanic and the Californian      None
+                                                                                                                          The Lonely City: Adventures in the Art of Being Alone      None
+                                                                                                      The Gray Rhino: How to Recognize and Act on the Obvious Dangers We Ignore      None
+                                                                                                                     The Golden Condom: And Other Essays on Love Lost and Found      None
+                                                                                                                                                 The Epidemic (The Program 0.6)      None
+                                                                                                                                                               The Dinner Party      None
+                                                                                                                                                      The Diary of a Young Girl      None
+                                                                                                                                                                   The Children      None
+                                                                                                                                        Stars Above (The Lunar Chronicles #4.5)      None
+                                                                                Snatched: How A Drug Queen Went Undercover for the DEA and Was Kidnapped By Colombian Guerillas      None
+                                                                                                                          Raspberry Pi Electronics Projects for the Evil Genius      None
+                                                                                                            Quench Your Own Thirst: Business Lessons Learned Over a Beer or Two      None
+                                                                                                                                               Psycho: Sanitarium (Psycho #1.5)      None
+                                                                                                                                               Poisonous (Max Revere Novels #3)      None
+                                                                                                                                                    One with You (Crossfire #5)      None
+                                                                                                                                                No Love Allowed (Dodge Cove #1)      None
+                                                                                                                          Murder at the 42nd Street Library (Raymond Ambler #1)      None
+                                                                                                                                                                    Most Wanted      None
+                                                                                                                                                           Love, Lies and Spies      None
+                                                                                                                         How to Speak Golf: An Illustrated Guide to Links Lingo      None
+                                                                                                                                                     Hide Away (Eve Duncan #20)      None
+                                                                                                                            Furiously Happy: A Funny Book About Horrible Things      None
+                                                                                                                             Everyday Italian: 125 Simple and Delicious Recipes      None
+                                                                                                           Equal Is Unfair: America's Misguided Fight Against Income Inequality      None
+                                                                                                                                                                 Eleanor & Park      None
+                                                                                                                                                            Dirty (Dive Bar #1)      None
+                                                                                                                               Can You Keep a Secret? (Fear Street Relaunch #4)      None
+                                                                                                                                                  Boar Island (Anna Pigeon #19)      None
+                                                                                                                                                              A Paris Apartment      None
+                                            A la Mode: 120 Recipes in 60 Pairings: Pies, Tarts, Cakes, Crisps, and More Topped with Ice Cream, Gelato, Frozen Custard, and More      None
+                                                                                                                              Troublemaker: Surviving Hollywood and Scientology      None
+                                                                                                                                                                      The Widow      None
+                                                                                                              The Sleep Revolution: Transforming Your Life, One Night at a Time      None
+                                                                                                                                                      The Improbability of Love      None
+                                                                                                                                                 The Art of Startup Fundraising      None
+                                                                                                                                    Take Me Home Tonight (Rock Star Romance #3)      None
+                                                                                                                                              Sleeping Giants (Themis Files #1)      None
+                                                                                               Setting the World on Fire: The Brief, Astonishing Life of St. Catherine of Siena      None
+                                                                                                                                                              Playing with Fire      None
+                                                                                                                                          Off the Hook (Fishing for Trouble #1)      None
+
+ORDER_BY_LIMIT:
+SELECT title, price_inr FROM books ORDER BY price_inr DESC LIMIT 10;
+                                                                                         title price_inr
+                                                                          A Light in the Attic      None
+                                                                            Tipping the Velvet      None
+                                                                                    Soumission      None
+                                                                                 Sharp Objects      None
+                                                         Sapiens: A Brief History of Humankind      None
+                                                                               The Requiem Red      None
+                                            The Dirty Little Secrets of Getting Your Dream Job      None
+       The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull      None
+The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics      None
+                                                                               The Black Maria      None
+
+DISTINCT:
+SELECT DISTINCT category_name FROM categories ORDER BY category_name;
+     category_name
+     Add a comment
+               Art
+     Autobiography
+         Biography
+          Business
+         Childrens
+         Christian
+ Christian Fiction
+      Contemporary
+             Crime
+          Cultural
+           Default
+           Erotica
+           Fantasy
+           Fiction
+    Food and Drink
+            Health
+        Historical
+Historical Fiction
+           History
+            Horror
+             Humor
+             Music
+           Mystery
+         New Adult
+        Nonfiction
+        Philosophy
+            Poetry
+          Politics
+        Psychology
+          Religion
+           Romance
+           Science
+   Science Fiction
+         Self Help
+    Sequential Art
+      Spirituality
+          Thriller
+            Travel
+    Womens Fiction
+       Young Adult
+
+BETWEEN:
+SELECT title, price_gbp FROM books WHERE price_gbp BETWEEN 10 AND 30;
+Empty DataFrame
+Columns: [title, price_gbp]
+Index: []
+
+JOIN:
+SELECT c.category_name, b.title, b.rating FROM books b JOIN categories c ON c.category_id = b.category_id ORDER BY b.rating DESC, b.title LIMIT 10;
+     category_name                                                                       title  rating
+        Nonfiction          #HigherSelfie: Wake Up Your Life. Free Your Soul. Find Your Tribe.       5
+         Christian                  (Un)Qualified: How God Uses Broken People to Do Big Things       5
+Historical Fiction                                     A Flight of Arrows (The Pathfinders #2)       5
+           Default               A Piece of Sky, a Grain of Rice: A Memoir in Four Meditations       5
+           Mystery                                      A Time of Torment (Charlie Parker #14)       5
+        Nonfiction                                                               Abstract City       5
+        Nonfiction                                              Agnostic: A Spirited Manifesto       5
+        Historical                                                 All the Light We Cannot See       5
+           Default                                                                      Amatus       5
+    Food and Drink Barefoot Contessa at Home: Everyday Recipes You'll Make Over and Over Again       5
+
+SQL and pandas.merge equivalent: True
+     category_name                                                                       title  rating
+        Nonfiction          #HigherSelfie: Wake Up Your Life. Free Your Soul. Find Your Tribe.       5
+         Christian                  (Un)Qualified: How God Uses Broken People to Do Big Things       5
+Historical Fiction                                     A Flight of Arrows (The Pathfinders #2)       5
+           Default               A Piece of Sky, a Grain of Rice: A Memoir in Four Meditations       5
+           Mystery                                      A Time of Torment (Charlie Parker #14)       5
+        Nonfiction                                                               Abstract City       5
+        Nonfiction                                              Agnostic: A Spirited Manifesto       5
+        Historical                                                 All the Light We Cannot See       5
+           Default                                                                      Amatus       5
+    Food and Drink Barefoot Contessa at Home: Everyday Recipes You'll Make Over and Over Again       5

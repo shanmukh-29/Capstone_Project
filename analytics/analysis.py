@@ -26,83 +26,81 @@ FIGURES.mkdir(exist_ok=True)
 RANDOM_STATE = 42
 
 
-def load_once():
-    csv_path = ROOT / "titanic.csv"
-    if csv_path.exists():
-        return pd.read_csv(csv_path)
-    data = sns.load_dataset("titanic")
-    data.to_csv(csv_path, index=False)
-    return data
-
-
-def iqr_count(series):
-    q1, q3 = series.quantile([0.25, 0.75])
-    iqr = q3 - q1
-    return int(((series < q1 - 1.5 * iqr) | (series > q3 + 1.5 * iqr)).sum())
-
-
 def main():
-    df = load_once()
+    # Load and preprocess data
+    df = pd.read_csv(ROOT / "titanic.csv")
+    df["deck"] = df["deck"].astype("category")
+    # Add 'Unknown' to the categories before filling NaN values
+    if "Unknown" not in df["deck"].cat.categories:
+        df["deck"] = df["deck"].cat.add_categories("Unknown")
+    df["deck"] = df["deck"].fillna("Unknown")
+    df["embark_town"] = df["embark_town"].fillna(df["embark_town"].mode()[0])
+    df["age"] = df["age"].fillna(df["age"].median())
+
+    # Define features and target
+    numerical_features = ["age", "fare", "sibsp", "parch"]
+    categorical_features = ["pclass", "sex", "embark_town", "deck"]
+
+    # Create preprocessor
+    numerical_transformer = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="median")),
+        ("scaler", StandardScaler())
+    ])
+    categorical_transformer = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="most_frequent")),
+        ("onehot", OneHotEncoder(handle_unknown="ignore"))
+    ])
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ("num", numerical_transformer, numerical_features),
+            ("cat", categorical_transformer, categorical_features)
+        ])
+
+    # Define models
+    models = {
+        "Logistic Regression": LogisticRegression(random_state=RANDOM_STATE),
+        "Decision Tree": DecisionTreeClassifier(random_state=RANDOM_STATE),
+        "Random Forest": RandomForestClassifier(random_state=RANDOM_STATE)
+    }
+
+    # Split data
+    X = df.drop("survived", axis=1)
+    y = df["survived"]
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE, stratify=y)
+
+    # Train and evaluate models
     with (ROOT / "eda_report.txt").open("w", encoding="utf-8") as report:
-        report.write(str(df.info(buf=None)) + "\n")
-        report.write(f"shape={df.shape}\n{df.describe(include='all').to_string()}\n")
-        missing = (df.isna().mean() * 100).loc[lambda values: values > 0]
-        report.write(f"missing_percentages={missing.to_dict()}\n")
-        report.write("Rule: under 5% missing rows are dropped; 5%-30% are median/mode imputed; high-missing deck is encoded as Unknown.\n")
-        for column in missing.index:
-            rate = missing[column]
-            if rate < 5:
-                report.write(f"{column}: {rate:.2f}% -> drop affected rows\n")
-            elif rate <= 30:
-                report.write(f"{column}: {rate:.2f}% -> impute\n")
-            else:
-                report.write(f"{column}: {rate:.2f}% -> retain as Unknown category or median-impute numeric\n")
-        df = df.dropna(subset=["survived", "pclass", "sex", "fare"]).copy()
-        df["age"] = df["age"].fillna(df["age"].median())
-        df["embarked"] = df["embarked"].fillna("Unknown")
-        df["deck"] = df["deck"].fillna("Unknown")
-        for column in ("age", "fare"):
-            before = df[column].describe()[["mean", "std"]]
-            df[column + "_z"] = (df[column] - df[column].mean()) / df[column].std()
-            after = df[column + "_z"].describe()[["mean", "std"]]
-            report.write(f"{column} outliers by IQR={iqr_count(df[column])}; before={before.to_dict()}; after={after.to_dict()}\n")
-        fare_mode = df["fare"].mode().iloc[0]
-        report.write(f"fare mean={df.fare.mean():.3f}, median={df.fare.median():.3f}, mode={fare_mode:.3f}; the mean > median > mode ordering indicates right skew.\n")
-        report.write("survival_by_sex\n" + df.groupby("sex")["survived"].mean().to_string() + "\n")
-        report.write("survival_by_pclass\n" + df.groupby("pclass")["survived"].mean().to_string() + "\n")
-        report.write("survival_by_sex_pclass\n" + df.groupby(["sex", "pclass"])["survived"].mean().to_string() + "\n")
-        corr_cols = ["survived", "pclass", "age", "sibsp", "parch", "fare"]
-        corr = df[corr_cols].corr()
-        report.write("exact_6_column_correlation\n" + corr.to_string() + "\n")
-        pairs = corr.where(np.triu(np.ones(corr.shape), 1).astype(bool)).stack().abs().sort_values(ascending=False).head(2)
-        report.write(f"two_strongest_absolute_pairs={pairs.to_dict()}\n")
-        sns.set_theme(style="whitegrid")
-        fig, axes = plt.subplots(2, 2, figsize=(12, 9))
-        sns.histplot(df["age"], ax=axes[0, 0], kde=True); axes[0, 0].set_title("Age distribution")
-        sns.boxplot(x=df["age"], ax=axes[0, 1]); axes[0, 1].set_title("Age outliers")
-        sns.histplot(df["fare"], ax=axes[1, 0], kde=True); axes[1, 0].set_title("Fare distribution")
-        sns.boxplot(x=df["fare"], ax=axes[1, 1]); axes[1, 1].set_title("Fare outliers")
-        fig.tight_layout(); fig.savefig(FIGURES / "univariate.png"); plt.close(fig)
-        fig, ax = plt.subplots(figsize=(8, 5)); sns.heatmap(corr, annot=True, cmap="coolwarm", ax=ax); fig.tight_layout(); fig.savefig(FIGURES / "correlation_heatmap.png"); plt.close(fig)
-        charts = [
-            (sns.barplot, {"data": df, "x": "sex", "y": "survived", "hue": "pclass"}, "survival_by_sex_class.png"),
-            (sns.boxplot, {"data": df, "x": "survived", "y": "fare"}, "fare_by_survival.png"),
-            (sns.scatterplot, {"data": df, "x": "age", "y": "fare", "hue": "survived"}, "age_fare_survival.png"),
-            (sns.barplot, {"data": df, "x": "pclass", "y": "survived", "hue": "sex"}, "class_sex_survival.png"),
-        ]
-        for chart, kwargs, filename in charts:
-            fig, ax = plt.subplots(figsize=(8, 5)); chart(ax=ax, **kwargs); fig.tight_layout(); fig.savefig(FIGURES / filename); plt.close(fig)
-        X = df[["pclass", "age", "sibsp", "parch", "fare", "sex", "embarked"]]
-        y = df["survived"]
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.2, stratify=y, random_state=RANDOM_STATE)
-        numeric = ["pclass", "age", "sibsp", "parch", "fare"]
-        categorical = ["sex", "embarked"]
-        preprocessor = ColumnTransformer([("numeric", Pipeline([("imputer", SimpleImputer(strategy="median")), ("scale", StandardScaler())]), numeric), ("categorical", Pipeline([("imputer", SimpleImputer(strategy="most_frequent")), ("onehot", OneHotEncoder(handle_unknown="ignore"))]), categorical)])
-        models = {"Logistic Regression": LogisticRegression(max_iter=1000), "Decision Tree": DecisionTreeClassifier(max_depth=5, random_state=RANDOM_STATE), "Random Forest": RandomForestClassifier(n_estimators=150, random_state=RANDOM_STATE)}
+        report.write("# Titanic EDA and Modeling Report\n\n")
+        report.write(f"## Data Info\n\n{df.info(buf=None)}\n\n")
+        report.write(f"## Describe Numerical Features\n\n{df[numerical_features].describe().to_string()}\n\n")
+        report.write(f"## Describe Categorical Features\n\n")
+        for col in categorical_features:
+            report.write(f"### {col}\n\n{df[col].value_counts().to_string()}\n\n")
+        
+        fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+        sns.histplot(df["age"], kde=True, ax=axes[0])
+        axes[0].set_title("Age Distribution")
+        sns.countplot(x="survived", data=df, ax=axes[1])
+        axes[1].set_title("Survival Count")
+        fig.tight_layout()
+        fig.savefig(FIGURES / "distributions.png")
+        plt.close(fig)
+
+        fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+        sns.boxplot(x="survived", y="age", data=df, ax=axes[0])
+        axes[0].set_title("Survival by Age")
+        sns.boxplot(x="survived", y="fare", data=df, ax=axes[1])
+        axes[1].set_title("Survival by Fare")
+        fig.tight_layout()
+        fig.savefig(FIGURES / "survival_by_features.png")
+        plt.close(fig)
+
         metrics = {}
-        for name, estimator in models.items():
-            pipe = Pipeline([("preprocessor", preprocessor), ("model", estimator)])
-            pipe.fit(X_train, y_train); predictions = pipe.predict(X_test); probabilities = pipe.predict_proba(X_test)[:, 1]
+        for name, model in models.items():
+            pipe = Pipeline(steps=[("preprocessor", preprocessor), ("model", model)])
+            pipe.fit(X_train, y_train)
+            predictions = pipe.predict(X_test)
+            probabilities = pipe.predict_proba(X_test)[:, 1]
             metrics[name] = {"accuracy": accuracy_score(y_test, predictions), "precision": precision_score(y_test, predictions), "recall": recall_score(y_test, predictions), "f1": f1_score(y_test, predictions), "auc": roc_auc_score(y_test, probabilities)}
             report.write(f"{name} confusion_matrix={confusion_matrix(y_test, predictions).tolist()}\n")
             if name == "Decision Tree":
